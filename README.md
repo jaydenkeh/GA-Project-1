@@ -1,1 +1,1 @@
-# GA-Project-1
+# Rainbow Symbol
