@@ -1,0 +1,165 @@
+body {
+  font-family: "Fredoka One";
+}
+
+header {
+  text-align: center;
+}
+
+.game {
+  text-align: center;
+  margin: 0 auto;
+  height: 600px;
+  width: 800px;
+  padding: 10px;
+}
+
+.page {
+  position: relative;
+}
+
+#instructionPage {
+  position: absolute;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin: -200px 0 0 -200px;
+}
+
+#board {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+}
+
+#board2 {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(4, auto);
+}
+
+.card {
+  position: relative;
+  width: 80px;
+  height: 100px;
+  font-size: 50px;
+  text-align: center;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card-front {
+  border: 2px solid #dbdbdb;
+  border-radius: 10px;
+  line-height: 100px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-back {
+  border-radius: 10px;
+  line-height: 100px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotateY(180deg);
+  transition: 0.5s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+
+.matched {
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+
+/* https://blog.hubspot.com/website/center-div-css - reference to centralize*/
+.proceed {
+  position: absolute;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 300px;
+  height: 300px;
+  margin: -150px 0 0 -150px;
+}
+
+#proceedmessage {
+  font-size: 36px;
+  background-color: white;
+  border: 10px solid #fa583c;
+  border-radius: 20px;
+  transition: all 300ms ease-in;
+}
+
+.win {
+  position: absolute;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 300px;
+  height: 300px;
+  margin: -150px 0 0 -150px;
+}
+
+.fade {
+  opacity: 0.05;
+  background: #e8e8e8;
+}
+
+/* Adopted from https://codepen.io/DanielWeiner/pen/naybVd*/
+#startButton {
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "Press Start 2p";
+  padding: 10px 10px 10px 10px;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 0.2em gray;
+  cursor: pointer;
+}
+
+#startButton:active {
+  box-shadow: none;
+  position: relative;
+  top: 0.2em;
+}
+
+#restartButton {
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-family: "Press Start 2p";
+  padding: 10px 10px 10px 10px;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 0.2em gray;
+  cursor: pointer;
+}
