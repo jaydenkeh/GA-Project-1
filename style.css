@@ -118,6 +118,14 @@ header {
   margin: -150px 0 0 -150px;
 }
 
+#winmessage {
+  font-size: 36px;
+  background-color: white;
+  border: 10px solid #fa583c;
+  border-radius: 20px;
+  transition: all 300ms ease-in;
+}
+
 .fade {
   opacity: 0.05;
   background: #e8e8e8;
@@ -162,4 +170,10 @@ header {
   border-radius: 7px;
   box-shadow: 0 0.2em gray;
   cursor: pointer;
+}
+
+#restartButton:active {
+  box-shadow: none;
+  position: relative;
+  top: 0.2em;
 }

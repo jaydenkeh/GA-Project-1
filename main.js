@@ -1,5 +1,9 @@
 import $ from "jquery";
 
+let currentMatched = 0;
+let currentFlipped = 0;
+let selectedCards = [];
+
 //* Symbol name that matches getbootstrap icons font - used for the game board cards
 const gameCardsBoard1 = [
   { symbol: "airplane-engines", color: "#f03e35" },
@@ -37,10 +41,6 @@ const rainbowColorsBoard2 = [
   "#4c18db",
   "#ad42eb",
 ];
-
-let currentMatched = 0;
-let currentFlipped = 0;
-let selectedCards = [];
 
 const gameStart = () => {
   $("#boardContainerPage").hide();
